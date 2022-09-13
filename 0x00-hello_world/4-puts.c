@@ -1,8 +1,11 @@
 #include <stdio.h>
+/*                                                                                                                               
+* Description - prints statement                                                                                                 
+* main - output to stdout                                                                                                        
+* return - 0                                                                                                                     
+*/
 /*
-* Description - prints statement
-* main- output to stdout
-* return - 0 if success
+* main prints statement
 */
 int main(void)
 {
