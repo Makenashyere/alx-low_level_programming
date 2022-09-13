@@ -1,14 +1,17 @@
 #include <stdio.h>
 int main(void)
+/**
+* main - prints line followed by new line
+* description - prints line
+* return - (0)
+*/
 
 {
-         char c;
-         int i;
-         long i;
-         long lli;
-         float f;
+printf("sizeof char: %d byte(s)\n", sizeof(char));
+printf("size of int: %d byte(s)\n", sizeof(int));
+printf("size of long int: %d byte(s)\n", sizeof(long int));
+printf("size of long long int: %d byte(s)\n", sizeof(long long int));
+printf("size of float: %d byte(s)\n", sizeof(float));
 
-         printf("size of char: %ld byte(s)\n", sizeof(c));
-         printf("size of int: %ld byte(s)\n", sizeof(i));
-         printf("size of long int: %ld byte(s)", sizeof(li);
-         printf("size of long long int: %ld byte(s)", sizeof(lli));
+return (0);
+}
