@@ -1,13 +1,11 @@
 #include <stdio.h>
-/*                                                                                                                               
-* Description - prints statement                                                                                                 
-* main - output to stdout                                                                                                        
-* return - 0                                                                                                                     
-*/
 /*
-* main prints statement
+* Description - prints out a string
+* main - prints string to stdout
+* return - 0
 */
 int main(void)
+/* main - code goes here */
 {
 puts("\"Programming is like building a multilingual puzzle");
 return (0);
