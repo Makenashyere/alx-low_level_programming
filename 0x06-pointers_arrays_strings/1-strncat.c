@@ -1,15 +1,16 @@
 #include "main.h"
 /**
- * _strncat - concatenate teo strings
- * @dest: string to be appended ob 
- * @src: string to be completed
+ * _strncat - concatenate two strings but add inputted number
+ * @dest: string to be appended upon
+ * @src: string to be completed 
  * @n: integer parameter
- * Return: new string
+ * Return: returns new concanated string
  */
 
 char *_strncat(char *dest, char *src, int n)
 {
-	int index = 0, dest_len = 0;
+
+	int index = 0, dest, dest_len = 0;
 
 	while (dest[index++])
 		dest_len++;
