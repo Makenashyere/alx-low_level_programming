@@ -1,31 +1,23 @@
 #include <stdlib.h>
 #include <time.h>
 #include <stdio.h>
-/*
-* main - print if number is greater ,less than
-*
-*this program prints less or greater than
-* return 0
-*/
+
+/**
+ * main - prints the last digit of the random number
+ * Return: 0
+ */
 int main(void)
 {
-int n;
-int l;
+	int n;
 
-srand(time(0));
-n = rand() - RAND_MAX / 2;
-l = n % 10;
-
-if (l > 5)
-{
-printf("the last digit of %d is %d and is greater than 5\n", n, l);
+	srand(time(0));
+	n = rand() - RAND_MAX / 2;
+	printf("Last digit of %d ", n. n % 10);
+	if (n % 10 > 5)
+		printf("and is greater than 5\n");
+	else if (n % 10 == 0)
+		printf("and is 0\n");
+	else if (n % 10 < 6 && n % 10 != 0)
+		printf("and is less that 6 and is not 0\n");
+	return (0);
 }
-else if (l == 0)
-{
-printf("the last digit of %d is %d and is 0\n". n, l);
-}
-else
-{
-printf("the last digit of %d is %d and is less than 6 and not 0\n", n, l);
-}
-return (0);
