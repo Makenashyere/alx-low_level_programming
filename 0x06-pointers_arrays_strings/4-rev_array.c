@@ -1,18 +1,20 @@
 #include "main.h"
 
 /**
- * reverse_array - funct that reverses array
- * @a: array
+ * reverse_array - reverses an array of integers
+ * @a: array to be reserved
  * @n: number of elements
  */
-
 void reverse_array(int *a, int n)
 {
-	int tmp, index;
-	for (index = n - 1; index > n / 2; index--)
+	int i, j, tmp;
+
+	j = n - 1;
+
+	for (i = 0; i < n / 2; i++)
 	{
-		tmp = a[n -1 -index];
-		a[n - 1 index] = a[index];
-		a[index] = tmp;
+		tmp = a[i];
+		a[i] = a[j];
+		a[j--] = tmp;
 	}
 }
