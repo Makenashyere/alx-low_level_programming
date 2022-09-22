@@ -1,46 +1,29 @@
 #include "main.h"
 
 /**
- * rot13 - ro13 encoder
- * @str: string ti be encoded
+ * rot13 - encodes a string
+ * @s: string 
  *
- * Return: address of the encoded string
+ * Return: the result
  */
-
-char *rot13(char *str)
+char *rot13(char *s)
 {
-	int i = 0;
+	int i, j;
 
-	while (str[i] != '\0')
+	char a[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
+	char b[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghjiklm"
+
+	for (i = 0; s[i] != '\0'; i++)
 	{
-		str[i] = transform_2(str[i]);
-		i++;
-	}
-	return (str);
-}
-
-/**
- * transform_2 - helper function 
- * @x: char to be encosed
- *
- * Return: the encoded char
- */
-
-char transform_2(char x)
-{
-	char one[52] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-	char two[52] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyz";
-	int i = 0;
-	char replacement = x;
-
-	while(i < 52)
-	{
-		if (x == one[i])
+		for (j = 0; a[j] != '\0'; j++)
 		{
-			replacement = two[i];
-			break;
+			if (s[i] == a[j])
+			{
+				s[i] = b[j];
+				break;
+			}
 		}
-		i++;
 	}
-	return (replacement);
+
+	return (s);
 }
