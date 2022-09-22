@@ -1,50 +1,33 @@
 #include "main.h"
 
 /**
- * _strlen - returns the length of a string
- * @s: string
- * Return: returns lengthas integer
+ * cap_string - capitalizes every word of a string
+ * @s: string to modify
+ *
+ * Return: resulting s
  */
-
-int _strlen(char *s)
+char *cap_string(char *s)
 {
-	int len = 0;
+	int i, j;
 
-	while (*(s + len) != '\0')
-		len++;
-	
-	return (len);
-}
+	char spe[13] = { ' ', '\t', '\n', ',', ';', '.', '!', '?', '"', '(', ')', '{', '}'};
 
-/**
- * cap_string - function thet capitalizes 1st char
- * @str: string
- * Return: string
- */
-
-char *cap_string(char *str)
-{
-	int index = 0;
-
-	while (str[++index])
+	for (i = 0; s[i] != '\0'; i++)
 	{
-		while (!(str[index] >= 'a') && (str[index] <= 'z'))
-			index++;
-		if (str[index - 1] == ' ' ||
-				str[index - 1] == '\t' ||
-				str[index - 1] == '\n' ||
-				str[index - 1] == ',' ||
-				str[index - 1] == ';' ||
-				str[index - 1] == '.' ||
-				str[index - 1] == '!' ||
-				str[index - 1] == '?' ||
-				str[index - 1] == '"' ||
-				str[index - 1] == '(' ||
-				str[index - 1] == ')' ||
-				str[index - 1] == '{' ||
-				str[index - 1] == '}')
-			str[index] -= 32;
+		if (i == 0 && s[i] >= 'a' && s[i] <= 'z')
+			s[i] -= 32;
+
+		for (j = 0; j < 13; j++)
+		{
+			if (s[i] == spe[j])
+			{
+				if (s[i + 1] >= 'a' && s[i + 1] <= 'z')
+				{
+					s[i + 1] -= 32;
+				}
+			}
+		}
 	}
 	
-	return (str);
+	return (s);
 }
