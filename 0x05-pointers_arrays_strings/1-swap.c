@@ -5,7 +5,7 @@
  * @a: pointer to first value
  * @b: pointer to 2nd value
  */
-coid swap_int(int *a, int *b)
+void swap_int(int *a, int *b)
 {
 	int c;
 
