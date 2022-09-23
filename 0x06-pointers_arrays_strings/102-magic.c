@@ -1,6 +1,6 @@
 #include "main.h"
 
-int main(coid)
+int main(void)
 {
 	int n;
 	int a[5];
