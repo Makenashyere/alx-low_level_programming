@@ -2,8 +2,8 @@
 
 /**
 * mul - multiplies two numbers
-* @b - first number
-* @a - 2nd number
+* @a - first number
+* @b - 2nd number
 * Return: results
 */
 
