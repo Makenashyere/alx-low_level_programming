@@ -5,7 +5,7 @@
 * @b - first number
 * @a - 2nd number
 * return: results
-&/
+*/
 
 int mul(int a, int b)
 {
