@@ -1,10 +1,10 @@
 #include <stdio.h>
 
 /**
-* function_main - prints out string to stdout
+* main - prints out string to stdout
 *
 * Description - prints out string
-* Return - 0 if success
+* Return: 0 if success
 */
 int main(void)
 {
