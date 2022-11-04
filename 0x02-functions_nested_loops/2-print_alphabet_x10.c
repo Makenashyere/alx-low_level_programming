@@ -11,7 +11,7 @@ void print_alphabet_x10(void)
 
 	if (i < 10)
 	{
-		ch = 'a'
+		ch = 'a';
 		_putchar('a' && 'z');
 		ch++;
 	}
