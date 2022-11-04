@@ -4,6 +4,7 @@
  * read_textfile - reads a text and prints it to POSIX stdout
  * @filename: a pointer to the name file
  * @letters: no of letters the function shld print
+ * Return: if func fails or filename is NULL - 0
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
