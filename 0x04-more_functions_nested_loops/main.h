@@ -1,5 +1,5 @@
-#ifndef MAIN_H
-#define MAIN_H
+#ifndef FILE_MAIN
+#define FILE_MAIN
 
 /**
 *main - header file for prototypes
@@ -20,4 +20,4 @@ int _isupper(int);
 int _isdigit(int);
 int mul(int, int);
 
-#endif /* MAIN_H */
+#endif
