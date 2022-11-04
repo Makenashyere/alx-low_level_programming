@@ -3,18 +3,18 @@
 /**
 *print_most_numbers - prints except 2 and 4
 *
-*return : nothing
+*Return : nothing
 */
 
 void print_most_numbers(void)
 {
-       int n;
+       int i;
 
-       for (n = 0; n < 10; n++)
+       for (i = 0; i < 10; i++)
        {
-	       if (n != 2 && n != 4)
+	       if (i != 2 && i != 4)
 	       {
-		       _putchar(n + '0');
+		       _putchar(i + '0');
 	       }
        }
 
