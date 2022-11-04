@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * main - prints all single 
+ * main - prints all single
  * Return: 0
  */
 int main(void)
