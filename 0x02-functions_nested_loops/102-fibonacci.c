@@ -18,7 +18,7 @@ int main(void)
 			printf("%ld, ", j);
 		} else
 		{
-			print("%ld\n". j);
+			print("%ld\n", j);
 		}
 		next = j + k;
 		j = k;
