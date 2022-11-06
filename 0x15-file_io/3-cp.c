@@ -36,12 +36,12 @@ void close_file(int fd)
 	int c;
 
 	c = close(fd)
-
-		if (c == -1)
-		{
-			dprint(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
-			exit(100);
-		}
+		
+	if (c == -1)
+	{
+		dprint(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
+		exit(100);
+	}
 }
 
 /**
@@ -87,8 +87,8 @@ int main(int argc, char *argv[])
 
 			r = read(from, buffer, 1024);
 			to = open(argv[2], O_WRONLY | O_APPEND);
-
-} while (r > 0);
+	
+	} while (r > 0);
 
         free(buffer);
 	close_file(from);
