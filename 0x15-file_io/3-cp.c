@@ -50,6 +50,11 @@ void close_file(int fd)
  * @argv: arrayof pointers to args
  *
  * Return: 0
+ *
+ * Description: if the arg count is incorrect - exit code 97
+ *              if file_from doesn't exist or can't be read - exit code 98
+ *              if file_to can't be created or written to - exit code 99
+ *              if file_to or file_from can't be closed - exit code 100
  */
 int main(int argc, char *argv[])
 {
