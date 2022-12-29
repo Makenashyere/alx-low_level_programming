@@ -3,7 +3,7 @@
 /**
  * print_dlidtint - prints all the el
  *
- * @h: head
+ * @h: head of the lll
  * Return:
  * no. of nodes
  */
