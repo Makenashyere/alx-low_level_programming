@@ -35,7 +35,7 @@ void close_file(int fd)
 {
 	int c;
 
-	c = close(fd)
+	c = close(fd);
 		
 	if (c == -1)
 	{
@@ -63,7 +63,7 @@ int main(int argc, char *argv[])
 
 	if (argc != 3)
 	{
-		dprint(STDERR_FILENO, "Usage: cp file_from file_to\n");
+		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 		exit(97);
 	}
 
@@ -75,7 +75,7 @@ int main(int argc, char *argv[])
 	do {
 		if (from == -1 || r == -1)
 		{
-			dprint(STDERR_FILENO,
+			dprintf(STDERR_FILENO,
 					"Error: Can't read from file %s\n", argv[1]);
 			free(buffer);
 			exit(98);
