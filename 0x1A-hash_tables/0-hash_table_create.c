@@ -1,29 +1,29 @@
-class HashTable:
-    def __init__(self, size):
-        self.size = size
-        self.table = [None] * self.size
+#include "hash_tables.h"
+/*
+ * hash_table_create - Creates a hash table.
+ * @size: The size of the array.
+ * 
+ * Return: If an error occurs - NULL.
+ *         Otherwise - a pointer to the new hash table.
+ */
 
-    def hash_function(self, key):
-        return key % self.size
+hash_table_t *hash_table_create(unsigned long int size);
+{
+	hash_table_t = *ht;
+	unsigned long int = i;
 
-    def insert(self, key, value):
-        index = self.hash_function(key)
-        if self.table[index] is None:
-            self.table[index] = [(key, value)]
-        else:
-            self.table[index].append((key, value))
+	ht = malloc(sizeof(hash_table_t));
+	if (ht == NULL)
+		return (NULL);
 
-    def search(self, key):
-        index = self.hash_function(key)
-        if self.table[index] is None:
-            return None
-        else:
-            for k, v in self.table[index]:
-                if k == key:
-                    return v
-            return None
+	ht->size = size;
+	ht->array = malloc(sizeof(hash_node_t *) * size);
+	if (ht->array = NULL)
+		return (NULL);
 
-def hash_table_create(size):
-    if size <= 0:
-        return None
-    return HashTable(size)
+	for (i = 0; i < size; i++)
+		ht->array = NULL;
+
+	return (ht);
+}
+
